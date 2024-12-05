@@ -1,0 +1,226 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .clock{
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.25) 0px 0px 0px 1px;
+
+        .numbers{
+            width: 100%;
+            height: 100%;
+            // background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .number{
+                position: absolute;
+                // background-color: red;
+                height: 100%;
+                font-size: 2.5em;
+            }
+            .one{
+                transform: rotate(30deg);
+                p{
+                    transform: rotate(-30deg);
+                }
+            }
+            .two{
+                transform: rotate(60deg);
+                p{
+                    transform: rotate(-60deg);
+                }
+            }
+            .three{
+                transform: rotate(90deg);
+                p{
+                    transform: rotate(-90deg);
+                }
+            }
+            .four{
+                transform: rotate(120deg);
+                p{
+                    transform: rotate(-120deg);
+                }
+            }
+            .five{
+                transform: rotate(150deg);
+                p{
+                    transform: rotate(-150deg);
+                }
+            }
+            .six{
+                transform: rotate(180deg);
+                p{
+                    transform: rotate(-180deg);
+                }
+            }
+            .seven{
+                transform: rotate(210deg);
+                p{
+                    transform: rotate(-210deg);
+                }
+            }
+            .eight{
+                transform: rotate(240deg);
+                p{
+                    transform: rotate(-240deg);
+                }
+            }
+            .nine{
+                transform: rotate(270deg);
+                p{
+                    transform: rotate(-270deg);
+                }
+            }
+            .ten{
+                transform: rotate(300deg);
+                p{
+                    transform: rotate(-300deg);
+                }
+            }
+            .eleven{
+                transform: rotate(330deg);
+                p{
+                    transform: rotate(-330deg);
+                }
+            }
+        }
+        .hands{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(116, 111, 111, 0.293);
+            position: absolute;
+            top: 0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .second{
+                height: 40%;
+                width: 2px;
+                background-color: red;
+                transform: translateY(-50%) rotate(0deg);
+                border-radius: 40px;
+                position: absolute;
+                z-index: 99;
+            }
+            .minute{
+                height: 35%;
+                width: 4px;
+                background-color: rgb(42, 185, 52);
+                transform: translateY(-50%) rotate(0deg);
+                border-radius: 40px;
+                position: absolute;
+                z-index: 88;
+            }
+            .hour{
+                height: 30%;
+                width: 8px;
+                background-color: black;
+                transform: translateY(-50%) rotate(0deg);
+                border-radius: 20px;
+                position: absolute;
+                z-index: 11;
+            }
+        }
+        .digital{
+            width: 100%;
+            height: 20%;
+            // background-color: aqua;
+            position: absolute;
+            top: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+
+            .dhours{
+                width: 80px;
+                height: 80px;
+                background-color: #fff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.8em;
+            }
+            .dminute{
+                width: 80px;
+                height: 80px;
+                background-color: #fff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.8em;
+            }
+            .dsecond{
+                width: 80px;
+                height: 80px;
+                background-color: #fff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.8em;
+            }
+        }
+    }
+}
+
+@media(max-width:600px){
+    main{
+        .clock{
+            width: 300px;
+            height: 300px;
+
+            .numbers{
+                .number{
+                    font-size: 1.5em;
+                }
+            }
+            .digital{
+                .dhours{
+                    width: 50px;
+                    height: 50px;
+                    font-size: 1em;
+                    font-weight: 500;
+                }
+                .dminute{
+                    width: 50px;
+                    height: 50px;
+                    font-size: 1em;
+                    font-weight: 500;
+                }
+                .dsecond{
+                    width: 50px;
+                    height: 50px;
+                    font-size: 1em;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
